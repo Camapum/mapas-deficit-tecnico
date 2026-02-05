@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Painel Interativo — Capítulo 3 | Produção Agropecuária × Presença Técnica</title>
+  <style>
+    :root{
+      --text:#1f2937;
+      --muted:#6b7280;
+      --border:#e5e7eb;
+      --bg:#ffffff;
+      --bg2:#f9fafb;
+      --shadow:0 10px 25px rgba(0,0,0,.06);
+      --radius:14px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:var(--bg2);
+    }
+    .wrap{
+      max-width: 980px;
+      margin: 36px auto;
+      padding: 0 18px;
+    }
+    .header{
+      background:var(--bg);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    h1{
+      margin:0 0 8px 0;
+      font-size: 22px;
+      line-height: 1.25;
+    }
+    .subtitle{
+      margin:0;
+      color:var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .meta{
+      margin-top:14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .pill{
+      font-size: 12px;
+      color: var(--text);
+      background:#eef2ff;
+      border:1px solid #e0e7ff;
+      padding: 7px 10px;
+      border-radius: 999px;
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media(min-width: 760px){
+      .grid{ grid-template-columns: 1fr 1fr 1fr; }
+    }
+    .card{
+      background:var(--bg);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--shadow);
+      display:flex;
+      flex-direction:column;
+      min-height: 170px;
+    }
+    .card h2{
+      margin: 0 0 8px 0;
+      font-size: 16px;
+    }
+    .card p{
+      margin:0 0 14px 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+      flex:1;
+    }
+    .btn{
+      display:inline-block;
+      text-decoration:none;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--text);
+      background: #ffffff;
+      text-align:center;
+    }
+    .btn:hover{ background:#f3f4f6; }
+    .footer{
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+      padding: 14px 6px;
+    }
+    .note{
+      background:var(--bg);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      box-shadow: var(--shadow);
+      margin-top: 14px;
+    }
+    .note strong{ display:block; margin-bottom: 6px; }
+    .mono{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    .small{ font-size:12px; color:var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="header">
+      <h1>Painel Interativo — Capítulo 3</h1>
+      <p class="subtitle">
+        Produção Agropecuária × Presença Técnica (Proxy). Visualizações interativas para apoio à análise,
+        diagnóstico territorial e comunicação institucional.
+      </p>
+
+      <div class="meta">
+        <span class="pill">📌 Unidade de análise: UF / Município</span>
+        <span class="pill">📅 Série: 2019–2024</span>
+        <span class="pill">🧭 Uso: diagnóstico, priorização e monitoramento</span>
+      </div>
+    </div>
+
+    <div class="note">
+      <strong>Orientação de uso</strong>
+      <div class="small">
+        Selecione um dos mapas abaixo. Os painéis permitem consulta por território e inspeção de indicadores.
+        Recomenda-se acessar via navegador atualizado (Chrome/Edge/Firefox) e, se necessário, utilizar “atualizar” (Ctrl+F5).
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Mapa 3.1 — Produção (VPA)</h2>
+        <p>
+          Visualização da produção agropecuária (VPA), permitindo comparação territorial e leitura por intensidade
+          de produção, com foco em evidenciar concentrações e heterogeneidades regionais.
+        </p>
+        <a class="btn" href="mapa_3_1_producao_vpa.html">Abrir mapa</a>
+      </div>
+
+      <div class="card">
+        <h2>Mapa 3.2 — Densidade Técnica</h2>
+        <p>
+          Indicador de densidade técnica (proxy), permitindo análise comparativa por território. Apoia a identificação
+          de capacidade instalada e distribuição relativa de assistência/atuação técnica.
+        </p>
+        <a class="btn" href="mapa_3_2_densidade_tecnica.html">Abrir mapa</a>
+      </div>
+
+      <div class="card">
+        <h2>Mapa 3.3 — Déficit Técnico (P5)</h2>
+        <p>
+          Índice de déficit técnico relativo, com recorte de maior criticidade (P5). Destinado a subsidiar priorização,
+          focalização de ações e comunicação de risco/insuficiência de suporte técnico.
+        </p>
+        <a class="btn" href="mapa_3_3_deficit_tecnico_p5.html">Abrir mapa</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div><strong>Observação institucional:</strong> este material é disponibilizado para fins de análise e apoio à decisão. Recomenda-se validar interpretações com a documentação metodológica do estudo.</div>
+      <div class="small" style="margin-top:6px;">
+        Endereço público: <span class="mono">https://camapum.github.io/mapas-deficit-tecnico/</span>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
